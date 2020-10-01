@@ -1,0 +1,16 @@
+.Footer{
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(203, 212, 212);
+    padding-top: 20px;
+}
+.Icons{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.Icons a{
+    padding-left: 10px;
+}

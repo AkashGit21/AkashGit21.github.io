@@ -1,0 +1,43 @@
+.Activities{
+    width: 100%;
+    min-height: 100%;
+    margin-left: 10%;
+    margin-top: 10%;    
+}
+
+.ActivityTypeContainer{
+    display: inline-block;
+    width: 30%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.ActivityType{
+    padding: 5px;
+    background-color: mediumseagreen;
+}
+.ActivityType:hover{
+        display: block;
+        color: mediumseagreen;
+        background-color: white;
+        border: 2px solid green;
+        border-radius: 10px;
+}
+
+.ActivitiesListContainer{
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.ActivitiesList{    
+    display: block;
+    padding: 5px;
+    background-color: black;
+    border: 2px solid green;
+    border-radius: 5px;
+}
