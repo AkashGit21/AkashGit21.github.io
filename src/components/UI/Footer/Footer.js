@@ -13,7 +13,7 @@ const footer = () =>(
             <a href="mailto:akashgzb98@gmail.com">  <Gmail/>  </a>
             <a href="https://www.facebook.com/akgthegreat">  <Facebook/>  </a>
         </div>
-        <p> &copy; Created by Akash Gupta | akashgzb98@gmail.coom</p>
+        <p> &copy; Created by Akash Gupta | akashgzb98@gmail.com</p>
     </div>
 );
 

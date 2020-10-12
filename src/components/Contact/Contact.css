@@ -1,0 +1,25 @@
+.Heading{
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: lighter;
+    font-style: italic;
+}
+.InfoContainer{
+    width: 80%;
+    margin: 10%;
+    padding: 0;
+    text-align: justify;
+}
+.Button{
+    margin-left: 50%;
+    padding: 10px;
+}
+.Button:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-height:500px){
+    .InfoContainer{
+        margin: 5%;
+    }
+} 

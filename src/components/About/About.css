@@ -1,0 +1,33 @@
+
+.AboutContainer{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.ImgContainer{
+    width: 30%;
+    max-height: 300px;
+    max-width: 250px;
+    display: flex;
+}
+
+.InfoContainer{
+    width: 65%;
+    display: flex;
+    padding: 10px;
+    flex-flow: column wrap;
+}
+.Details{
+    text-align: justify;
+    padding-bottom: 5px;
+}
+.InfoContainer ul{
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+}
+.InfoContainer > ul > li{
+    width: 33%;
+}

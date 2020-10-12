@@ -2,8 +2,9 @@
     bottom: 0;
     position: fixed;
     width: 100%;
+    max-height: 150px;
     text-align: center;
-    background-color: rgb(203, 212, 212);
+    background-color: mediumaquamarine;
     padding-top: 20px;
 }
 .Icons{

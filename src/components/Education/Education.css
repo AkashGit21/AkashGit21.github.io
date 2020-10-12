@@ -1,0 +1,25 @@
+.EducationContainer{
+    width: 100%;
+}
+.EducationType{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;    
+    margin: 20px 0 10px 0;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+.Standard{
+    width: 40%;
+}
+.Institute{
+    width: 60%;
+}
+.Grade{
+    width: 40%;
+
+}
+.Score{
+    width: 60%;
+}

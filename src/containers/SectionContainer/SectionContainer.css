@@ -1,9 +1,29 @@
 .SectionContainer{
-    top: 10;
-    left: 0;
-    right: 0;
-    bottom: 0; 
-    min-width: 100%;
-    min-height: 100%;
-    position: absolute;
+    display: flex;
+    flex-flow: column wrap;
+    width:100%;
+    padding: 100px 0 200px 0;
+}
+
+.Title{
+    width: 100%;
+    display: block;
+    font-size: 2.0em;
+    font-style: italic;
+    text-align: right;
+    background-color: mediumturquoise;
+}
+.ContentContainer{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: mediumseagreen;
+}
+
+@media screen and ( min-width:800px) and (min-height:500px) {
+    .SectionContainer{
+        width: 70%;
+        margin: 0 15% 0 15%;
+    }
+
 }

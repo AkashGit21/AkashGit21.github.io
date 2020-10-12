@@ -1,25 +1,26 @@
 .Activities{
     width: 100%;
     min-height: 100%;
-    margin-left: 10%;
-    margin-top: 10%;    
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .ActivityTypeContainer{
-    display: inline-block;
+    display: flex;
+    flex-flow: column wrap;
     width: 30%;
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: white;
 }
 
 .ActivityType{
+    display: flex;
+    flex-flow: row wrap;
     padding: 5px;
     background-color: mediumseagreen;
 }
 .ActivityType:hover{
-        display: block;
         color: mediumseagreen;
         background-color: white;
         border: 2px solid green;
@@ -27,17 +28,18 @@
 }
 
 .ActivitiesListContainer{
-    display: inline-block;
+    display: flex;
+    flex-flow: column wrap;
     width: 70%;
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
-.ActivitiesList{    
+.ActivityList{    
     display: block;
     padding: 5px;
-    background-color: black;
     border: 2px solid green;
     border-radius: 5px;
+    text-align: justify;
 }

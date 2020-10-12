@@ -1,73 +1,72 @@
 import React, {Component} from 'react';
-import styled from 'styled-components';
 import SectionContainer from '../../containers/SectionContainer/SectionContainer';
 import classes from './Activities.css';
+import { FaRegHandPointRight } from 'react-icons/fa';
 
 class activities extends Component{  
     
     constructor(props){
         super(props);
         this.state = {
-            currentActivity: 'Technical',
-            activityType : ["Technical","School","Extra Curricular"],
-            activitiesList: [
-                {'Technical': [
-                    "Secured 21st position at Cadathon MANIT (an Inter NIT Coding Contest) among 6000 students.",
+            currentActivity: null,
+            activitiesType: ['Technical','School','ExtraCurricular'],
+            activitiesList: {
+                "Technical": [
+                    "Secured 21st position at Cadathon MANIT (an Inter NIT Coding Contest)",
                     "Won Inception 3.1 organized by ACM NIT-Surat",
-                    "Won Codewars organized by Hertz SVNIT.",
-                    "ABC" ] 
-                }
-                , { "School":[
-                    "School 1",
-                    "School 2",
-                    "Won Codewars organized by Hertz SVNIT.",
-                    "ABC" ]
-                }, {"Extra Curricular": [
-                    "Secured 21st position at Cadathon MANIT (an Inter NIT Coding Contest) among 6000 students.",
-                    "Won Inception 3.1 organized by ACM NIT-Surat",
-                    "Won Codewars organized by Hertz SVNIT.",
-                    "ABC" ]
-                }
-            ],
+                    "Won Codewars organized by IEEE Students Forum at SVNIT",
+                    "Solved more than 400 problems on different platforms", 
+                ],  
+                "School":[
+                    "Participated in Inter-School Quiz organized by St. John's Society",
+                    "Achieved ranks for three cosecutive years in Spelling Bee Copetition from grade V to VIII",
+                    "Participated in Inter-School Cultural Meet organized by St. John's Society",
+                ] ,
+                "ExtraCurricular": [
+                    "Volunteered for Surat Night Marathon 2018",
+                    "Volunteered for District Games at Special Olympics Bharat in 2014",
+                     ] ,
+            }
         }
     }
 
+
     changeActivity = (id)=>{
-        // const curActivity = this.state.activities[0];
-        // console.log( curActivity);
-        // const listToDisplay = curActivity.activitiesList;
-        // console.log(listToDisplay);
+        this.setState({currentActivity:id}); 
     }
 
-    render(){       
+    render(){    
 
-        if(this.state.currentActivity === null) 
+        let listToDisplay = (<div></div>);
+        let curActivity = null;
+
+        if(this.state.currentActivity === null )
             this.setState({currentActivity:'Technical'});
-        let curActivitiesList = this.state.activitiesList[this.state.currentActivity];
-        if(curActivitiesList)
-            console.log(curActivitiesList);
+
+        if(this.state.currentActivity!==null && this.state.currentActivity!==curActivity ){
+            curActivity = this.state.currentActivity;
+
+            let index=0;
+            listToDisplay = this.state.activitiesList[curActivity].map(item =>{
+                return (<div className={classes.ActivityList} key={curActivity + (index++)}> {item} </div>)
+            })
+        }
 
         return (
             <SectionContainer title="Activities"> 
                 <article className={classes.Activities}>
-
                     <section className={classes.ActivityTypeContainer}>
-                        {this.state.activityType.map(activity => {
+                        {this.state.activitiesType.map(activity=>{
                             return (
-                                    <div className={classes.ActivityType} 
-                                        onClick={() => this.changeActivity(activity.id)} 
-                                        key={activity}> 
-                                        {activity} </div>
-                            );
-                        })}
+                                <div className={classes.ActivityType}
+                                    onClick={() => this.changeActivity(activity)}
+                                    key={activity}> &nbsp; <FaRegHandPointRight/> &nbsp; {activity} </div>
+                            )
+                        })
+                        }
                     </section>
 
-                    <section className={classes.ActivitiesListContainer}>
-                        {curActivitiesList}
-                        {/* {curActivitiesList.map(activityList=>{
-                            return <div className={classes.ActivityList}>{activityList}</div>
-                        }) }                     */}
-                    </section>
+                    <section className={classes.ActivitiesListContainer}> {listToDisplay} </section>
 
                 </article>
             </SectionContainer> 
